@@ -7,7 +7,7 @@ type DangerousInnerHTMLDef struct {
 }
 
 func DangerousInnerHTML(s string) *DangerousInnerHTMLDef {
-	o := js.Global.Get("Object").New()
+	o := object.New()
 	o.Set("__html", s)
 
 	res := &DangerousInnerHTMLDef{o: o}
